@@ -21,7 +21,7 @@ export const fetchPostStart = () => {
   };
 };
 
-export const fetchPost = (post) => {
+export const fetchPost = (postId) => {
   return dispatch => {
     dispatch(fetchPostStart());
     axios.get('/posts/' + postId + '?_embed=comments')
